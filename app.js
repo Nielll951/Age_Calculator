@@ -44,7 +44,12 @@ function calculateAge() {
       m3 = 11
       y3--
    }
-   result.innerHTML = `You are <span>${y3}</span> years, <span>${m3}</span> month and <span>${d3}</span> days old.`
+
+   let pluralDays = d3 !== 1 ? " days" : " day";
+   let pluralMonths = d3 !== 1 ? " months" : " month";
+   let pluralYears = d3 !== 1 ? " years" : " year";
+
+   result.innerHTML = `You are <span>${y3}</span>${pluralYears}, <span>${m3}</span>${pluralMonths} and <span>${d3}</span>${pluralDays} old.`
 }
 
 // it will retur the last day of the month
